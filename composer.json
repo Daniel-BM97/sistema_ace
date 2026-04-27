@@ -1,0 +1,23 @@
+{
+    "name": "danielbm/sistema_ace",
+    "autoload": {
+        "psr-4": {
+            "Danielbm\\SistemaAce\\": "Sistema_Ace/",
+            "model\\": "model/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel-BM97",
+            "email": "danielbm97@hotmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^13.1"
+    }
+}
