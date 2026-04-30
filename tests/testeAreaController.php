@@ -1,21 +1,25 @@
 <?php
-
-
+declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
+use model\AreaModel;
+
 require_once __DIR__ . '/../controller/AreaController.php';
+
 class AreaControllerTest extends TestCase
 {
-    public function testListarOutputsView()
+    public function testListar()
     {
-        global $conn;
-        $connMock = $this->createMock(PDO::class);
+        $areasFake = [
+            ['id' => 1, 'nome' => 'Área 1']
+        ];
 
-        $controller = new AreaController($connMock);
+        $mock = $this->createMock(AreaModel::class);
+        $mock->method('listarTodas')->willReturn($areasFake);
 
-        ob_start();
-        $controller->listar();
-        $output = ob_get_clean();
+        $controller = new AreaController($mock);
 
-        $this->assertNotEmpty($output);
+        $resultado = $controller->listar();
+
+        $this->assertEquals($areasFake, $resultado);
     }
 }

@@ -31,6 +31,8 @@ class AreaTest extends TestCase
         $this->assertEquals([
             ['id_area' => 0, 'nome_area' => 'Area 1']
             ],$result);
+
+        $this->assertEmpty(!$result);
         
     }
 }
