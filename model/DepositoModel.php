@@ -1,5 +1,7 @@
 <?php
 
+namespace model;
+
 class DepositoModel {
     private $conn;
 
