@@ -4,7 +4,7 @@ declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 use model\AreaModel;
 
-class AreaTest extends TestCase
+class AreaModelTest extends TestCase
 {
     public function testeArealistarTodas(): void
 
