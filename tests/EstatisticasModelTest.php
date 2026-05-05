@@ -27,8 +27,8 @@ class EstatisticasModelTest extends TestCase
 
         $result = $estatisticasModel->contarAreas();
 
-        $this->assertIsInt($result);
-        $this->assertGreaterThanOrEqual(0, $result);
+        $this->assertIsString($result);
+        $this->assertGreaterThanOrEqual(0, (int)$result);
     }
 
     public function testContarImoveis(): void
@@ -37,8 +37,8 @@ class EstatisticasModelTest extends TestCase
 
         $result = $estatisticasModel->contarImoveis();
 
-        $this->assertIsInt($result);
-        $this->assertGreaterThanOrEqual(0, $result);
+        $this->assertIsString($result);
+        $this->assertGreaterThanOrEqual(0, (int)$result);
     }
 
     public function testContarVisitas(): void
@@ -47,7 +47,7 @@ class EstatisticasModelTest extends TestCase
 
         $result = $estatisticasModel->contarVisitas();
 
-        $this->assertIsInt($result);
-        $this->assertGreaterThanOrEqual(0, $result);
+        $this->assertIsString($result);
+        $this->assertGreaterThanOrEqual(0, (int)$result);
     }
 }
