@@ -1,8 +1,4 @@
 
-CREATE DATABASE sistema_ace;
-
-USE sistema_ace;
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -59,7 +55,6 @@ CREATE TABLE `deposito` (
   `amostra` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
--
 
 INSERT INTO `deposito` (`id_deposito`, `id_visita`, `tipo`, `foco`, `tratado`, `qtd_larvicida`, `amostra`) VALUES
 (1, 11, 'A1', 1, NULL, 1, NULL),

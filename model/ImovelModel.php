@@ -1,5 +1,7 @@
 <?php
 
+namespace model;
+
 class ImovelModel {
     private $conn;
 
